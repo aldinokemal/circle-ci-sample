@@ -2,8 +2,6 @@ name: Manual Trigger
 
 on:
   workflow_dispatch:
-    tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
     inputs:
       logLevel:
         description: 'Log level'
