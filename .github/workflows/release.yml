@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Relase
-        run: echo "ini relase ke $RELEASE_VERSION"
+        run: echo "ini relase ke $GITHUB_REF"
