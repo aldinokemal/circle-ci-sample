@@ -1,0 +1,11 @@
+on: 
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+([0-9]+)'
+
+jobs:
+  release-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Relase
+        run: echo "ini relase ke $RELEASE_VERSION"
