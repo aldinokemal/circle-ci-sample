@@ -2,13 +2,22 @@ name: Manual Trigger Windows
 
 on: 
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
 
 jobs:
   release-version:
     runs-on: windows-latest
     environment: production
     steps:
-      - name: Relase
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
         with:
