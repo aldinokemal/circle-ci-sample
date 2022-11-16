@@ -27,6 +27,7 @@ on:
 jobs:
   release-version:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Relase
         run: echo "ini relase ke $GITHUB_REF"
